@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ARE services</string>
+    <string name="register">Register</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Email</string>
+    <string name="already_ac">Already have an  account ? <b><font color='#F1231A'>Login</font></b></string>
+    <string name="new_user">Don\'t have an account? <b><font color='#F1231A'>Create a new account</font></b></string>
+    <string name="login_or_register_to_continue">Login or register to continue</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_your_mobile_number">Enter your Mobile number</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="or_connect_using">or Connect Using</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="connect_with_google">Connect With Google</string>
+    <string name="connect_with_facebook">Connect With Facebook</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="providing">By proving my phone number , I hereby agree  \nand accept the <b><font color='#F1231A'>Terms of Service </font></b>and <b><font color='#F1231A'>Privacy Policy </font></b>I use \nof the ARE INDIA app.  </string>
+    <string name="verify_otp">Verify otp</string>
+    <string name="don_t_receive_otp">Don\'t Receive OTP?</string>
+    <string name="resend_otp">RESEND OTP</string>
+    <string name="enter_your_otp_sent_to_your_number">Enter your OTP sent to your number</string>
+</resources>
