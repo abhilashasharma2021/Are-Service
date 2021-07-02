@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.areservices.R;
+import com.areservices.adapter.ChooseServiceAdapter;
 import com.areservices.databinding.ActivityLogin2Binding;
 
 public class Login extends AppCompatActivity {
@@ -22,6 +23,22 @@ ActivityLogin2Binding binding;
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, RegisterActivity.class));
+            }
+        });
+
+
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, ChooserServiceActivity.class));
+            }
+        });
+
+
+        binding.txtForgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Login.this, ForgotPasswordActivity.class));
             }
         });
     }

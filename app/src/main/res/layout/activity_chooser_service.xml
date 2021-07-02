@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChooserServiceActivity">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/blue"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="3dp"
+                android:id="@+id/ivBack"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/tx"
+                android:layout_centerHorizontal="true"
+                android:text="@string/services"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/robotoslabbold"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/choose_the_services_nyou_require"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/robotoslabbold"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rvService"/>
+
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

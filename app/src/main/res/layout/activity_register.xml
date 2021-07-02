@@ -57,7 +57,7 @@
                     app:hintEnabled="false">
 
                     <EditText
-                        android:id="@+id/etSignUpPassword"
+                        android:id="@+id/etName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/user_name"
@@ -66,7 +66,6 @@
                         android:maxLength="80"
                         android:fontFamily="@font/robotoslabregular"
                         android:singleLine="true"
-                        android:inputType="textPassword"
                         android:drawableTint="@color/grey"
                         android:drawableStart="@drawable/user"
                         android:drawablePadding="2dp"
@@ -149,7 +148,7 @@
                     app:hintEnabled="false">
 
                     <EditText
-                        android:id="@+id/etSName"
+                        android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/password"
@@ -215,7 +214,7 @@
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="5dp"
                     android:backgroundTint="@color/purple_200"
-                    android:text="Register"
+                    android:text="@string/register"
                     app:cornerRadius="2dp">
 
 
