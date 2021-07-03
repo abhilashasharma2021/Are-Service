@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,16 @@ public class OtpVerifyActivity extends AppCompatActivity {
         getMobile = SharedHelper.getKey(getApplicationContext(), AppConstats.USERMOBILE);
 
         queue = SingletonRequestQueue.getInstance(this).getRequestQueue();
+
+
+        binding.txResend.setText("RESEND OTP");
+
+        binding.txResend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resend_otp();
+            }
+        });
 
 
         binding.btnVerify.setOnClickListener(new View.OnClickListener() {
@@ -125,6 +136,100 @@ public class OtpVerifyActivity extends AppCompatActivity {
 
 
     }
+
+    private void resend_otp() {
+
+        CustomDialog dialog=new CustomDialog();
+        dialog.showDialog(R.layout.progress_layout,OtpVerifyActivity.this);
+        StringRequest request = new StringRequest(Request.Method.POST, API.resend_otp, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                dialog.hideDialog();
+                Log.e("dfgvfdgb", "onResponse: " +response);
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    if (jsonObject.has("result")) {
+                        String result = jsonObject.getString("result");
+                        if (result.equals("Otp Sent Successfully")) {
+                            timer();
+
+
+                        }
+
+                    }
+
+
+                } catch (JSONException e) {
+                    Log.e("fgfdg", "e: " + e);
+                    dialog.hideDialog();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("fgfdg", "onErrorResponse: " + error);
+                dialog.hideDialog();
+
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> map = new HashMap<>();
+                map.put("mobile", getMobile);
+                return map;
+
+            }
+        };
+        request.setRetryPolicy(new DefaultRetryPolicy(10000, 1, 1.0f));
+
+        queue.add(request);
+
+
+    }
+
+    private void timer(){
+        binding.txResend.setText("Otp Sent Successfully");
+
+        new CountDownTimer(60000, 1000) {
+            public void onTick(long millisUntilFinished) {
+
+                binding.txResend.setText("Resend Code : " + millisUntilFinished / 1000);
+                binding.txResend.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(OtpVerifyActivity.this, "wait for "+ millisUntilFinished / 1000, Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+            }
+
+            public void onFinish() {
+
+                binding.txResend.setText("RESEND OTP");
+                binding.txResend.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        resend_otp();
+                    }
+                });
+            }
+
+        }.start();
+
+    }
+
+
+
+
+
+
+
+
+
+
 
     private void registration() {
 

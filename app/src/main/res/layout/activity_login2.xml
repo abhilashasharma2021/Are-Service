@@ -89,7 +89,7 @@
                     app:hintEnabled="false">
 
                     <EditText
-                        android:id="@+id/etSName"
+                        android:id="@+id/etPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/password"

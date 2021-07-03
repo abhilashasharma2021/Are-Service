@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/purple_200"
                 android:layout_marginTop="15dp"
-                android:text="@string/resend_otp"
+
                 android:fontFamily="@font/robotoslabbold"
                 android:textSize="12sp"
                 android:layout_marginRight="15dp" />
