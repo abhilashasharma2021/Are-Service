@@ -58,4 +58,27 @@ dependencies {
     //lottie
     implementation 'com.airbnb.android:lottie:3.5.0'
 
+   /*image slider*/
+    implementation 'com.github.smarteist:autoimageslider:1.3.2-appcompat'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //animation
+    implementation 'com.github.mohammadatif:Animatoo:master'
+
+    //dexter
+    implementation 'com.karumi:dexter:6.2.2'
+
+
+    ///styleabletoast
+    implementation 'com.muddzdev:styleabletoast:2.2.3'
+
+
+    //navigation ark
+    implementation 'com.rom4ek:arcnavigationview:2.0.0'
+
+    //animation
+    implementation 'com.github.mohammadatif:Animatoo:master'
+
 }

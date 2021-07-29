@@ -9,10 +9,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightRed">#8AF1231A</color>
     <color name="grey">#6D6D6D</color>
+    <color name="greyNew">#818181</color>
     <color name="grey_light">#E4DBDBDB</color>
     <color name="view_Grey">#dbdbdb</color>
     <color name="new_Grey">#CFBDBD</color>
     <color name="icon_Grey">#7C7A7A</color>
     <color name="light_grey">#E3E3E3</color>
     <color name="blue">#085797</color>
+    <color name="backOne">#F3EFEF</color>
+    <color name="ash">#2b2a2a</color>
 </resources>

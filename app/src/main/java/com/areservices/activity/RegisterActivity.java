@@ -50,7 +50,6 @@ public class RegisterActivity extends AppCompatActivity {
         binding.btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* startActivity(new Intent(RegisterActivity.this, MobileVerifyActivity.class));*/
                 stName=binding.etName.getText().toString().trim();
                 stEmail=binding.etEmail.getText().toString().trim();
                 stMobile=binding.etMobile.getText().toString().trim();
@@ -124,7 +123,7 @@ public class RegisterActivity extends AppCompatActivity {
                             SharedHelper.putKey(getApplicationContext(), AppConstats.USERID, jsonObject.getString("id"));
                             SharedHelper.putKey(getApplicationContext(), AppConstats.USERMOBILE, jsonObject.getString("phone_number"));
                             startActivity(new Intent(RegisterActivity.this, OtpVerifyActivity.class));
-
+                            finish();
                         }
 
                     }

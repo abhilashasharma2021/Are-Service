@@ -14,7 +14,12 @@
         <!-- Customize your theme here. -->
     </style>
 
-
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">#FFD700</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+    </style>
     <style name="customtheme" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/black</item>
 

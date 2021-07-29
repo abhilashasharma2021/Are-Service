@@ -11,11 +11,23 @@
 
     <item
         android:id="@+id/nav_service"
-        android:icon="@drawable/menu"
+        android:icon="@drawable/categories"
         android:state_checked="true"
         android:state_enabled="true"
         android:color="@color/white"
-        android:title="@string/all_service"/>
+        android:title="@string/category"/>
+
+
+
+    <item
+        android:id="@+id/nav_Notification"
+        android:icon="@drawable/history"
+        android:state_checked="true"
+        android:state_enabled="true"
+        android:color="@color/white"
+        android:title="@string/notification"/>
+
+
 
 
     <item
@@ -28,13 +40,6 @@
 
 
 
-    <item
-        android:id="@+id/nav_history"
-        android:icon="@drawable/history"
-        android:state_checked="true"
-        android:state_enabled="true"
-        android:color="@color/white"
-        android:title="@string/history"/>
 
 
 

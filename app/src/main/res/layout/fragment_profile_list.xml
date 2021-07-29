@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.ProfileActivity">
-    <LinearLayout
+    tools:context=".fragment.ProfileListFrag">
+
+    <RelativeLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="50dp">
@@ -16,19 +17,38 @@
             android:id="@+id/ivBack"
             android:layout_height="20dp"
             android:layout_marginLeft="15dp"
-            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
             android:src="@drawable/back"
             app:tint="@color/black" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="10dp"
-            android:text="Profile"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="@string/profile"
             android:textSize="18sp"
+            android:layout_toRightOf="@+id/ivBack"
             android:textStyle="bold" />
-    </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="110dp"
+            android:visibility="gone"
+            android:layout_marginEnd="15dp"
+            android:textSize="12dp"
+            android:id="@+id/btLogout"
+            android:textColor="@color/white"
+            android:text="Logout"
+            app:iconSize="18sp"
+            app:icon="@drawable/logout"
+            app:cornerRadius="10dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/purple_200"
+            android:textAllCaps="false"
+            android:fontFamily="@font/robotoslabbold"
+            android:layout_alignParentEnd="true"
+            android:layout_height="45dp"/>
+
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
@@ -38,7 +58,6 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/lightRed"
         android:layout_height="180dp">
 
         <RelativeLayout
@@ -46,21 +65,20 @@
             android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile_Img"
+                android:id="@+id/profileImg"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:src="@drawable/image1">
+                android:src="@drawable/pronew">
 
             </de.hdodenhof.circleimageview.CircleImageView>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="-35dp"
+                android:layout_marginLeft="-45dp"
                 android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/profile_Img"
+                android:layout_toRightOf="@+id/profileImg"
                 android:src="@drawable/cmer" />
 
         </RelativeLayout>
@@ -104,8 +122,8 @@
             android:fontFamily="@font/robotoslabregular"
             android:singleLine="true"
             android:maxLength="40"
+            android:inputType="textPersonName"
             android:background="@null"
-
             android:hint="@string/enter_your_name"
             android:paddingLeft="10dp" />
 
@@ -136,7 +154,7 @@
             app:tint="@color/black"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/calnew"/>
+            android:src="@drawable/dob"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -197,7 +215,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact No."
+            android:text="@string/contact_no"
             android:layout_gravity="center_vertical"
             android:textSize="15sp"
             android:layout_marginLeft="10dp"
@@ -210,18 +228,18 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="10dp"
             android:paddingStart="10dp"
-            android:id="@+id/txtPhone"
-            android:singleLine="true"
-            android:maxLength="80"
-            android:layout_centerVertical="true"
+            android:hint="@string/enter_your_mobile_number"
+            android:id="@+id/txMobile"
             android:fontFamily="@font/robotoslabregular"
-            android:background="@null"
-            android:hint="@string/mobile_no"
+            android:gravity="center_vertical"
             android:paddingLeft="10dp" />
+
+
+
 
         <ImageView
             android:layout_width="25dp"
@@ -237,44 +255,81 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#E0E0E0"/>
-
-
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/gender"
-        android:layout_gravity="center_vertical"
-        android:textSize="15sp"
-        android:layout_marginLeft="10dp"
-        android:fontFamily="@font/robotoslabbold"
-        />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:paddingStart="10dp"
-            android:id="@+id/etGender"
-            android:singleLine="true"
-            android:maxLength="80"
-            android:fontFamily="@font/robotoslabregular"
-            android:background="@null"
-            android:hint="@string/gender"
-            android:paddingLeft="10dp" />
-
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="25dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/edit"/>
-    </RelativeLayout>
+            android:src="@drawable/gender"
+            app:tint="@color/black" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/robotoslabbold" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginLeft="35dp"
+            android:inputType="text"
+            android:layout_centerVertical="true"
+            >
+
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:button="@null"
+                android:fontFamily="@font/robotoslabregular"
+                android:paddingRight="15dp"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:drawablePadding="30dp"
+                android:gravity="center_vertical"
+                android:text="@string/male"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:layout_weight="1"
+                android:fontFamily="@font/robotoslabregular"
+                android:paddingRight="15dp"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:drawablePadding="30dp"
+                android:gravity="center_vertical"
+                android:text="@string/female"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -298,4 +353,5 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginTop="10dp" />
+
 </LinearLayout>

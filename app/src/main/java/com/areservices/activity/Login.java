@@ -47,6 +47,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, RegisterActivity.class));
+                finish();
             }
         });
 
@@ -73,6 +74,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Login.this, ForgotPasswordActivity.class));
+                finish();
             }
         });
     }
@@ -128,7 +130,7 @@ public class Login extends AppCompatActivity {
                             SharedHelper.putKey(getApplicationContext(), AppConstats.USERPASSWORD, object.getString("password"));
 
                             startActivity(new Intent(Login.this, MainActivity.class));
-
+                            finish();
 
                         }
 

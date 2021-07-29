@@ -9,12 +9,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.areservices.activity.ChooserServiceActivity;
 import com.areservices.activity.CustomerCarDetailsActivity;
 import com.areservices.databinding.RowchooseservicelayoutBinding;
-import com.areservices.databinding.RowservicelistlayoutBinding;
 import com.areservices.model.ChooseServiceModel;
-import com.areservices.model.ServiceMenModel;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -39,7 +37,22 @@ public class ChooseServiceAdapter extends RecyclerView.Adapter<ChooseServiceAdap
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ChooseServiceModel modelObject = serviceList.get(position);
-        holder.rowchooseservicelayoutBinding.txName.setText(modelObject.getName());
+
+        if (!modelObject.equals("")){
+            holder.rowchooseservicelayoutBinding.txName.setText(modelObject.getName());
+
+
+
+            try {
+                Glide.with(holder.itemView)
+                        .load(modelObject.getPath()+modelObject.getImage())
+                        .into(holder.rowchooseservicelayoutBinding.ivMain);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+        }
 
 
 

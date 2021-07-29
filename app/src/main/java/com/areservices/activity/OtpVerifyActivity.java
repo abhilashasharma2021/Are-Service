@@ -3,6 +3,7 @@ package com.areservices.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.TextUtils;
@@ -25,6 +26,7 @@ import com.areservices.others.API;
 import com.areservices.others.AppConstats.AppConstats;
 import com.areservices.others.AppConstats.SharedHelper;
 import com.areservices.others.ProgressBarCustom.CustomDialog;
+import com.muddzdev.styleabletoast.StyleableToast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -254,7 +256,24 @@ public class OtpVerifyActivity extends AppCompatActivity {
                         if (result.equals("Registered successfully")) {
 
 
+                            SharedHelper.putKey(getApplicationContext(), AppConstats.USERID, jsonObject.getString("id"));
+                            SharedHelper.putKey(getApplicationContext(), AppConstats.USERNAME, jsonObject.getString("name"));
+                            SharedHelper.putKey(getApplicationContext(), AppConstats.USEREMAIL, jsonObject.getString("email"));
+                            SharedHelper.putKey(getApplicationContext(), AppConstats.USERMOBILE, jsonObject.getString("phone_number"));
+                            SharedHelper.putKey(getApplicationContext(), AppConstats.USERPASSWORD, jsonObject.getString("password"));
+
+
                             startActivity(new Intent(OtpVerifyActivity.this, MainActivity.class));
+                            finish();
+                        }
+                        else {
+
+                            new StyleableToast
+                                    .Builder(OtpVerifyActivity.this)
+                                    .text(jsonObject.getString("result"))
+                                    .textColor(Color.WHITE)
+                                    .backgroundColor(Color.parseColor("#d50000"))
+                                    .show();
 
                         }
 

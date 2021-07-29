@@ -5,13 +5,10 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.areservices.activity.CustomerCarDetailsActivity;
-import com.areservices.activity.ProfileActivity;
 import com.areservices.databinding.RowservicelistlayoutBinding;
 import com.areservices.model.ServiceMenModel;
 
@@ -47,7 +44,7 @@ public class ServiceMenListAdapter extends RecyclerView.Adapter<ServiceMenListAd
         holder.rowservicelistlayoutBinding.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext. startActivity(new Intent(mContext, ProfileActivity.class));
+              //  mContext. startActivity(new Intent(mContext, ProfileActivity.class));
             }
         });
 

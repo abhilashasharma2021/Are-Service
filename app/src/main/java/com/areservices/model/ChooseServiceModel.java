@@ -2,11 +2,9 @@ package com.areservices.model;
 
 public class ChooseServiceModel {
     private String name;
-
-    public ChooseServiceModel(String name, int image) {
-        this.name = name;
-        this.image = image;
-    }
+    private String image;
+    private String path;
+    private String catId;
 
     public String getName() {
         return name;
@@ -16,15 +14,27 @@ public class ChooseServiceModel {
         this.name = name;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
-    private int image;
+    public String getPath() {
+        return path;
+    }
 
+    public void setPath(String path) {
+        this.path = path;
+    }
 
+    public String getCatId() {
+        return catId;
+    }
+
+    public void setCatId(String catId) {
+        this.catId = catId;
+    }
 }

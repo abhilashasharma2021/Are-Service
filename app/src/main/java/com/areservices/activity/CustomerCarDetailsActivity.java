@@ -28,7 +28,7 @@ ActivityCustomerCarDetailsBinding binding;
         binding.btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CustomerCarDetailsActivity.this, ServiceMenListActivity.class));
+                //startActivity(new Intent(CustomerCarDetailsActivity.this, ServiceMenListActivity.class));
             }
         });
     }

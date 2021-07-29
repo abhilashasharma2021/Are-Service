@@ -116,41 +116,91 @@
                 android:id="@+id/etRegistrationNo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/registration_no"
-                android:textColorHint="@color/grey"
-                android:textSize="13sp"
-                android:maxLength="30"
                 android:fontFamily="@font/robotoslabregular"
+                android:hint="@string/registration_no"
+                android:maxLength="30"
+                android:padding="10dp"
                 android:singleLine="true"
-                android:padding="10dp" />
+                android:textColorHint="@color/grey"
+                android:textSize="13sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
-        <com.google.android.material.textfield.TextInputLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginLeft="10dp"
-            app:boxBackgroundColor="@color/white"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            app:hintEnabled="false">
-
-            <EditText
-                android:id="@+id/etPartName"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            android:background="@drawable/grey_stroke"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txPartName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
                 android:hint="@string/damage_part_name"
                 android:textColorHint="@color/grey"
                 android:textSize="13sp"
                 android:maxLength="80"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
                 android:fontFamily="@font/robotoslabregular"
                 android:singleLine="true"
                 android:padding="10dp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:drawSelectorOnTop="true"
+
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"/>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/grey_stroke"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txDamageDetail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/describe_your_damage_part_details"
+                android:textColorHint="@color/grey"
+                android:textSize="13sp"
+                android:maxLength="80"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/robotoslabregular"
+                android:singleLine="true"
+                android:padding="10dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:src="@drawable/location"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                app:tint="@color/icon_Grey" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -8,6 +8,10 @@ public  class API {
     public static String resend_otp=BaseUrl+"resend_otp";
     public static String login=BaseUrl+"login";
     public static String forget_password=BaseUrl+"forget_password";
+    public static String show_banner=BaseUrl+"show_banner";
+    public static String show_service=BaseUrl+"show_service";
+    public static String show_profile=BaseUrl+"update_profile";
+    public static String update_profile=BaseUrl+"update_profile";
 
 
 

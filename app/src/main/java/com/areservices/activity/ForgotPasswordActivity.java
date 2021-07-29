@@ -39,9 +39,6 @@ ActivityForgotPasswordBinding binding;
         binding=ActivityForgotPasswordBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-
-
         queue = SingletonRequestQueue.getInstance(this).getRequestQueue();
         binding.ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
