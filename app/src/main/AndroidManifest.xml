@@ -17,7 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AREServices">
-        <activity android:name=".activity.SettingActivity"></activity>
+        <activity android:name=".activity.SpinnerActivity">
+
+        </activity>
+        <activity android:name=".activity.RoughActivity">
+
+        </activity>
+        <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.AboutUsActivity" />
         <activity android:name=".activity.TermsAndConditionActivity" />
         <activity android:name=".activity.PrivacyPolicyActivity" />
@@ -38,7 +44,7 @@
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
-            android:name=".activity.CustomerCarDetailsActivity"
+            android:name=".activity.CustomerSendDetailsActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity
@@ -64,9 +70,7 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
-
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
     </application>
 
 </manifest>

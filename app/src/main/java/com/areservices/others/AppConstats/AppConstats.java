@@ -8,6 +8,7 @@ public class AppConstats {
     public static final String USEREMAIL="USEREMAIL";
     public static final String USERPASSWORD="USERPASSWORD";
     public static final String USERCPASSWORD="USERCPASSWORD";
+    public static final String ServiceID="ServiceID";
 
 
 

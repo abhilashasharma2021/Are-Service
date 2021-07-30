@@ -25,11 +25,11 @@
     <string name="enter_your_otp_sent_to_your_number">Enter your OTP sent to your number</string>
     <string name="send">Send</string>
     <string name="list">List</string>
-    <string name="customer_car_details">Customer Car Details</string>
+    <string name="customer_car_details">Customer Details</string>
     <string name="customer_name">Customer Name</string>
     <string name="model_no">Model No.</string>
     <string name="registration_no">Registration No.</string>
-    <string name="damage_part_name">Damage Part Name</string>
+    <string name="damage_part_name">Damage Part Type</string>
     <string name="upload_part_image">Upload Part Image</string>
     <string name="con_tinue">Continue</string>
     <string name="location">Location</string>
@@ -57,6 +57,8 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="category">Category</string>
+    <string name="select">Select Service Type</string>
+
     <string name="notification">Notification</string>
     <string name="logout">Logout</string>
     <string name="setting">Setting</string>
@@ -66,4 +68,5 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="settings">Settings</string>
     <string name="change_password">Change Password</string>
+    <string name="damage_part_details">Damage Part Details</string>
 </resources>

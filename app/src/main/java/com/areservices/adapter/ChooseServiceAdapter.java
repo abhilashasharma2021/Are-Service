@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.areservices.activity.CustomerCarDetailsActivity;
+import com.areservices.activity.CustomerSendDetailsActivity;
 import com.areservices.databinding.RowchooseservicelayoutBinding;
 import com.areservices.model.ChooseServiceModel;
+import com.areservices.others.AppConstats.AppConstats;
+import com.areservices.others.AppConstats.SharedHelper;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -59,7 +61,9 @@ public class ChooseServiceAdapter extends RecyclerView.Adapter<ChooseServiceAdap
         holder.rowchooseservicelayoutBinding.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               mContext. startActivity(new Intent(mContext, CustomerCarDetailsActivity.class));
+
+               SharedHelper.putKey(mContext, AppConstats.ServiceID, modelObject.getCatId());
+               mContext. startActivity(new Intent(mContext, CustomerSendDetailsActivity.class));
             }
         });
 

@@ -81,4 +81,8 @@ dependencies {
     //animation
     implementation 'com.github.mohammadatif:Animatoo:master'
 
+
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+    implementation'com.thomashaertel:multispinner:0.1.1'
 }

@@ -63,7 +63,7 @@ BottomNavigationView bottomNavigation;
                    Animatoo.animateSwipeRight(MainActivity.this);
                     drawerlayout.closeDrawer(GravityCompat.START);
                 }
-               /* else if (item.getItemId()==R.id.nav_category){
+                else if (item.getItemId()==R.id.nav_category){
                     getSupportFragmentManager().beginTransaction().replace(R.id.framContainer, new AllServicesFrag()).commit();
                     drawerlayout.closeDrawer(GravityCompat.START);
 
@@ -73,14 +73,14 @@ BottomNavigationView bottomNavigation;
                     Animatoo.animateSwipeLeft(MainActivity.this);
                     drawerlayout.closeDrawer(GravityCompat.START);
 
-                }*/
+                }
 
-               /* else if (item.getItemId()==R.id.nav_contact){
-                    startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+               else if (item.getItemId()==R.id.nav_contact){
+                   // startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
                     drawerlayout.closeDrawer(GravityCompat.START);
 
-                }*/
-              /*  else if (item.getItemId()==R.id.nav_term){
+                }
+              else if (item.getItemId()==R.id.nav_term){
                     startActivity(new Intent(MainActivity.this, TermsAndConditionActivity.class));
                     Animatoo.animateSlideLeft(MainActivity.this);
                     drawerlayout.closeDrawer(GravityCompat.START);
@@ -92,7 +92,7 @@ BottomNavigationView bottomNavigation;
                     Animatoo.animateSwipeRight(MainActivity.this);
                     drawerlayout.closeDrawer(GravityCompat.START);
 
-                }*/
+                }
 
                 else if (item.getItemId()==R.id.nav_logout){
                     dialogLogout();
