@@ -40,6 +40,7 @@ public class RoughActivity extends AppCompatActivity {
         spinner.setSelection(0, true);
 
         show_serviceType();
+
     }
 
 
